@@ -1,0 +1,5 @@
+fastapi~=0.105.0
+opencc
+pydantic-settings~=2.1.0
+pydantic~=2.5.2
+uvicorn[standard]
