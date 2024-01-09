@@ -4,7 +4,6 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
 from opencc import OpenCC
 
 from app.core.config import settings
@@ -15,9 +14,6 @@ HERE = Path(__file__).parent
 app = FastAPI(title=settings.PROJECT_NAME, debug=settings.is_debug)
 
 app.mount("/ui", StaticFiles(directory=HERE / "static", html=True), name="static")
-
-
-templates = Jinja2Templates(HERE / "templates")
 
 
 @app.get("/", include_in_schema=False)

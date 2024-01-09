@@ -1,0 +1,3 @@
+[submodule "opencc-quasar"]
+	path = opencc-quasar
+	url = ../opencc-quasar.git
